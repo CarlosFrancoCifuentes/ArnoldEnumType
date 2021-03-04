@@ -40,4 +40,14 @@ public enum Planeta {
     public double pesoSuperficie(double pesoTierra){
         return tuMasa(pesoTierra) * gravedadSuperficie(getMasa(), getRadio());
     }
+
+    public static Planeta[] getPlanetasTerrestres(){
+        
+        Planeta[] planetasTerrestres = new Planeta[4];
+		
+		for(int i=Planeta.MERCURY.ordinal(); i<Planeta.JUPITER.ordinal(); i++){
+			planetasTerrestres[i] = Planeta.values()[i];
+		}
+        return planetasTerrestres;
+    }
 }
