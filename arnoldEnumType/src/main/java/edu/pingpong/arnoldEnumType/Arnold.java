@@ -1,8 +1,8 @@
 package edu.pingpong.arnoldEnumType;
 
-import org.foobarspam.arnoldEnumType.logica.Planeta;
+import edu.pingpong.arnoldEnumType.domain.Planeta;
 
-public class ArnoldMain {
+public class Arnold {
 	
 	 public static void main(String[] args) {
 		 
