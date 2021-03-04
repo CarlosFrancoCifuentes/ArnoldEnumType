@@ -1,5 +1,7 @@
 package edu.pingpong.arnoldEnumType.domain;
 
+import java.util.EnumSet;
+
 public enum Planeta {
 
     MERCURY (3.303e+23, 2.4397e6),
@@ -41,13 +43,11 @@ public enum Planeta {
         return tuMasa(pesoTierra) * gravedadSuperficie(getMasa(), getRadio());
     }
 
-    public static Planeta[] getPlanetasTerrestres(){
-        
-        Planeta[] planetasTerrestres = new Planeta[4];
-		
-		for(int i=Planeta.MERCURY.ordinal(); i<Planeta.JUPITER.ordinal(); i++){
-			planetasTerrestres[i] = Planeta.values()[i];
-		}
-        return planetasTerrestres;
+    public static EnumSet<Planeta> getPlanetasTerrestres(){
+        return EnumSet.range(MERCURY, MARS);
+    }
+
+    public static EnumSet<Planeta> getGigantesGaseosos(){
+        return EnumSet.complementOf(getPlanetasTerrestres());
     }
 }
