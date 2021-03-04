@@ -1,1 +1,1 @@
-# arnoldEnumType
+# ArnoldEnumType
